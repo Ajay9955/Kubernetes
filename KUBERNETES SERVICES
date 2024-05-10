@@ -1,0 +1,17 @@
+What if there are No services ?
+
+Let's assume we have created 3 pods by using deploy and replica set. If one of the pod fails or goes down then replica set implements auto healing process and creates a new pod, but here when the new pod gets created the
+IP address of the pod also gets changed. so here we provided IP address for a bunch of users to acess the app in our pods. when the pods gets recreated then the IP address gets changed and some of the users who are using the IP address of the 
+pod that got killed cant access the app as they don't know the new IP address. So here in this situation a service called load balancer uses kube proxy which resolves this issue by providing access to the user using labels and selectors. 
+So here in detail the service uses labels and selectors instead of IP address to provie access to pods. so as the labels and selectors dosen't get changed when the pod is recreated by autohealing and usesrs dosen't face any issues in accessing
+pods.
+
+Services ---> services need to satisfy or provide these three 
+1. load balancing
+2. service discovery -------- labels and selectors are one example for k8s high level sevice discovery.
+3. expose to outside world ------ users can't access the pods by loging into cluster right so we have 3 options
+
+3 service modes in K8S
+        1. cluster IP -------- service can be acceses only through kubernetes cluster. It is used by k8s engineer who works on the core cluster so only main people in a org can access it by loging into cluster.
+        2. Nodeport -------- Here by using nodeport the users can access pods by worker nodes IP address and here also the access is limited to some set or group of people in organization.
+            3. Load balancer ------- Here anyone in the world can access the app, here kubernetes use EKS ----> ELB -- ELB provide a pubilc IP adress where anyone can acess the app from anywhere in the world at any time. 
