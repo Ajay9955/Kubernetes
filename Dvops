@@ -1,0 +1,36 @@
+  What is Devops?
+
+Devops is a process of improving the application or script or .. delivery by ensuring proper automation in place and ensuring good quality, continous monitoring or obeserveability and continous teating.
+
+Main AWS Services need to know as a Devops engineer --
+
+1.EC2
+2.VPC
+3.S3
+4.EBS
+5.IAM
+6.CLOUDWATCH(monitoring)
+7.LAMBDA
+8.CLOUD BUILD SERVICES(CI/CD SERVICES)
+  - AWS CODE PIPELINES
+  - AWS CODE BUILD
+  - AWS CODE DEPLOY
+9.AWS CONFIGURATION
+10.BILLING AND COSTING
+11.AWS KMS 
+12.CLOUD TRAIL
+13.AWS EKS
+14.FARGATE, ECS(container orchestration service)
+15.ELK (elastic search)
+
+
+SDLC - Software development life cycle
+
+Planning
+Designing
+Defining
+Building
+Testing
+Deployment
+
+As a devops engineer we automates the building, testing and deployment process.
